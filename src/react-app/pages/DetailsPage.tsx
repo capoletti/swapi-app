@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getResourceById } from '../services/swapiService';
+import { getDisplayFields } from '../utils/displayFields';
 import LoadingSpinner from '../components/LoadingSpinner';
 import './DetailsPage.css';
 
@@ -56,16 +57,28 @@ const DetailsPage = ({ resource }: { resource: string }) => {
     return value;
   };
 
+  const displayFields = getDisplayFields(resource);
+  const keysToRender = displayFields || Object.keys(item);
+
   return (
     <div className="details-page">
       <h1 className="details-title">{item.name || item.title}</h1>
       <div className="details-grid">
-        {Object.entries(item).map(([key, value]) => (
-          <div key={key} className="details-field">
-            <strong>{key.replace(/_/g, ' ')}:</strong>
-            <div>{renderValue(value)}</div>
-          </div>
-        ))}
+        {keysToRender.map((key) => {
+          const value = item[key];
+          if (!value || (Array.isArray(value) && value.length === 0)) {
+            return null;
+          }
+          if (key === 'name' || key === 'title') {
+            return null;
+          }
+          return (
+            <div key={key} className="details-field">
+              <strong>{key.replace(/_/g, ' ')}:</strong>
+              <div>{renderValue(value)}</div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
