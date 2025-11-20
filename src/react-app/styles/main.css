@@ -29,11 +29,9 @@ body {
 
 .content {
   flex: 1;
-  padding: 2rem;
+  padding: 2rem 5vw;
   animation: fadeIn 0.5s ease-in-out;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   box-sizing: border-box;
 }
 
