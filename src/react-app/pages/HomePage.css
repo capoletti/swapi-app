@@ -1,0 +1,24 @@
+/* src/react-app/pages/HomePage.css */
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+}
+
+.hero-section {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}

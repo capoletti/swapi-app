@@ -1,0 +1,50 @@
+/* src/react-app/pages/DetailsPage.css */
+.details-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.details-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.details-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.details-field:last-child {
+  border-bottom: none;
+}
+
+.details-field strong {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.details-field ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-field li {
+  padding: 0.25rem 0;
+}
