@@ -27,6 +27,24 @@
   border-radius: 5px 0 0 5px;
 }
 
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .search-button {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
 .search-button {
   padding: 0.5rem 1rem;
   font-size: 1rem;

@@ -5,12 +5,16 @@ import HomePage from './pages/HomePage';
 import ListPage from './pages/ListPage';
 import DetailsPage from './pages/DetailsPage';
 import './styles/main.css';
+import './styles/Stars.css';
 
 const App = () => {
   const resources = ['films', 'people', 'planets', 'species', 'starships', 'vehicles'];
 
   return (
     <div className="app">
+      <div className="stars"></div>
+      <div className="stars2"></div>
+      <div className="stars3"></div>
       <Navbar />
       <main className="content">
         <Routes>

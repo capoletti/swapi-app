@@ -11,17 +11,20 @@
 }
 
 body {
-  background-color: var(--secondary-color);
+  background-color: #000;
   color: var(--text-color);
   font-family: 'Orbitron', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .content {

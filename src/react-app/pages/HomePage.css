@@ -22,3 +22,13 @@
   font-size: 1.5rem;
   color: var(--text-color);
 }
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
